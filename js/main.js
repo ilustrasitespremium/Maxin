@@ -113,7 +113,7 @@
     var groups = {};
     document.querySelectorAll("[data-lightbox-group]").forEach(function (container) {
       var groupName = container.getAttribute("data-lightbox-group");
-      var items = Array.prototype.slice.call(container.querySelectorAll(".bento__item"));
+      var items = Array.prototype.slice.call(container.querySelectorAll(".carousel__item"));
       groups[groupName] = items;
       items.forEach(function (item, idx) {
         item.addEventListener("click", function () {
@@ -176,6 +176,90 @@
   lightbox.addEventListener("click", function (e) {
     if (e.target === lightbox) closeLightbox();
   });
+
+  /* ---------- carrossel (fotos dos ambientes + avaliações) ---------- */
+  document.querySelectorAll(".carousel").forEach(function (carousel) {
+    var track = carousel.querySelector(".carousel__track");
+    var prev = carousel.querySelector(".carousel__arrow--prev");
+    var next = carousel.querySelector(".carousel__arrow--next");
+    if (!track || !prev || !next) return;
+
+    function update() {
+      var scrollable = track.scrollWidth - track.clientWidth > 4;
+      carousel.classList.toggle("carousel--static", !scrollable);
+      prev.disabled = !scrollable || track.scrollLeft <= 4;
+      next.disabled = !scrollable || track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+    }
+
+    function step(dir) {
+      var item = track.firstElementChild;
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0) || 16;
+      var width = item ? item.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
+      track.scrollBy({ left: dir * width, behavior: "smooth" });
+    }
+
+    prev.addEventListener("click", function () { step(-1); });
+    next.addEventListener("click", function () { step(1); });
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
+  /* ---------- avaliações: modal com todas + foco na clicada ---------- */
+  var reviewsModal = document.getElementById("reviewsModal");
+  var reviewsModalList = document.getElementById("reviewsModalList");
+  var reviewsModalClose = document.getElementById("reviewsModalClose");
+  var reviewsAllBtn = document.getElementById("reviewsAllBtn");
+  var reviewButtons = Array.prototype.slice.call(document.querySelectorAll(".review"));
+
+  if (reviewsModal && reviewsModalList && reviewButtons.length) {
+    if (reviewsAllBtn) {
+      reviewsAllBtn.textContent = "Ver todas as " + reviewButtons.length + " avaliações →";
+    }
+    reviewButtons.forEach(function (btn, i) {
+      var clone = btn.cloneNode(true);
+      clone.removeAttribute("type");
+      var wrap = document.createElement("div");
+      wrap.className = "reviews-modal__item";
+      wrap.id = "review-" + i;
+      wrap.appendChild(clone);
+      reviewsModalList.appendChild(wrap);
+
+      btn.addEventListener("click", function () { openReviewsModal(i); });
+    });
+
+    var onReviewsKeydown = function (e) { if (e.key === "Escape") closeReviewsModal(); };
+
+    function openReviewsModal(focusIndex) {
+      reviewsModal.classList.add("is-open");
+      reviewsModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onReviewsKeydown);
+      if (typeof focusIndex === "number") {
+        var target = document.getElementById("review-" + focusIndex);
+        if (target) {
+          requestAnimationFrame(function () {
+            target.scrollIntoView({ block: "center" });
+            target.classList.add("is-highlighted");
+            setTimeout(function () { target.classList.remove("is-highlighted"); }, 1800);
+          });
+        }
+      }
+    }
+
+    function closeReviewsModal() {
+      reviewsModal.classList.remove("is-open");
+      reviewsModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onReviewsKeydown);
+    }
+
+    if (reviewsAllBtn) reviewsAllBtn.addEventListener("click", function () { openReviewsModal(); });
+    if (reviewsModalClose) reviewsModalClose.addEventListener("click", closeReviewsModal);
+    reviewsModal.addEventListener("click", function (e) {
+      if (e.target === reviewsModal) closeReviewsModal();
+    });
+  }
 
   /* ---------- smooth-close mobile menu on hash nav from desktop links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
