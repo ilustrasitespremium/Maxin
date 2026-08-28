@@ -196,7 +196,7 @@ ul{ list-style:none; }
    HERO
    ========================================================================== */
 .hero{
-  position: relative; height: 100svh; min-height: 560px;
+  position: relative; min-height: 100vh; min-height: 100svh;
   display: flex; align-items: flex-end;
   overflow: hidden;
   isolation: isolate;
@@ -216,7 +216,7 @@ ul{ list-style:none; }
 .hero__content{
   position: relative; z-index: 2;
   max-width: var(--container); margin: 0 auto; width: 100%;
-  padding: 0 1.5rem 5.5rem;
+  padding: 6.5rem 1.5rem 5.5rem;
 }
 .hero__title{
   font-family: var(--serif); font-weight: 500;
