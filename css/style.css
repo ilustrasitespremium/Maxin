@@ -264,7 +264,7 @@ ul{ list-style:none; }
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2.2rem;
 }
 .trust__item{ display: flex; align-items: center; gap: .9rem; }
-.trust__num{ font-family: var(--serif); font-size: 2rem; color: var(--brass-light); font-weight: 500; }
+.trust__num{ font-family: var(--serif); font-size: clamp(1.05rem, 2vw, 1.5rem); color: var(--brass-light); font-weight: 500; }
 .trust__label{ font-size: .78rem; color: rgba(246,241,233,.75); line-height: 1.35; }
 .trust__label small{ color: rgba(246,241,233,.5); }
 .trust__div{ width: 1px; height: 34px; background: var(--line-light); }
@@ -575,7 +575,10 @@ ul{ list-style:none; }
 }
 .cta__inner{ max-width: 640px; margin: 0 auto; }
 .cta__inner p{ color: rgba(246,241,233,.72); margin: 1.3rem 0 2.3rem; font-size: 1.05rem; line-height: 1.6; }
+.cta__inner .eyebrow{ color: var(--brass-light); font-size: .72rem; margin: 0 auto 1rem; }
+.cta__inner .eyebrow::before{ background: var(--brass-light); }
 .cta__actions{ display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta__inner .cta__note{ margin: 1.2rem auto 0; max-width: 46ch; font-size: .78rem; color: rgba(246,241,233,.55); }
 
 /* ==========================================================================
    FOOTER
