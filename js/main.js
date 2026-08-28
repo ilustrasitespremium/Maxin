@@ -37,7 +37,7 @@
      Checagem manual por getBoundingClientRect (em vez de depender só de
      IntersectionObserver): em rolagens muito rápidas (fling no celular) o
      observer pode não disparar a tempo e deixar o elemento invisível pra
-     sempre. Chamada direta a cada scroll (sem throttle por rAF — o custo é
+     sempre. Chamada direta a cada scroll (sem throttle por rAF, já que o custo é
      baixo e a lista só encolhe) garante que nada fique escondido. */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 
