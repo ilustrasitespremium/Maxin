@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Maxin | Móveis Planejados — Belo Horizonte</title>
+<meta name="description" content="Maxin Móveis Planejados — marcenaria sob medida em Belo Horizonte. Cozinhas, salas, quartos, closets, lavanderias e áreas gourmet projetadas e executadas com precisão. Nota 4,9 no Google.">
+<meta name="theme-color" content="#241B14">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Maxin | Móveis Planejados — Belo Horizonte">
+<meta property="og:description" content="Marcenaria sob medida em Belo Horizonte. Do projeto à montagem, cada ambiente com a sua identidade.">
+<meta property="og:image" content="images/full/sala-painel-marmore.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ CURSOR / GRAIN ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#inicio" class="nav__brand">
+      <span class="nav__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav__word">MAXIN<span class="nav__sub">móveis planejados</span></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#video">Vídeo</a>
+      <a href="#depoimentos">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a href="https://wa.me/5531994334029" target="_blank" rel="noopener" class="btn btn--ghost-light nav__whats">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.93 2.46a8.3 8.3 0 0 1 2.45 5.92c0 4.55-3.72 8.25-8.35 8.25a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-3.14.82.84-3.06-.2-.32a8.2 8.2 0 0 1-1.28-4.43c0-4.55 3.72-8.3 8.29-8.3m-4.6 4.7c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.53.13.16 1.7 2.7 4.2 3.71 2.07.84 2.49.68 2.94.63.45-.04 1.44-.58 1.64-1.15.2-.56.2-1.04.14-1.15-.06-.1-.23-.16-.48-.28-.25-.13-1.44-.71-1.67-.8-.22-.08-.38-.12-.55.13-.16.25-.63.79-.77.95-.14.16-.28.18-.53.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.24-.4.08-.17.04-.31-.02-.44-.06-.13-.55-1.36-.77-1.86-.2-.48-.4-.42-.55-.42h-.48Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Fora do <header>: o header usa backdrop-filter ao rolar (.nav.is-scrolled), o que
+     cria um novo containing block para descendentes position:fixed e quebrava o
+     tamanho/posição deste menu. Como irmão do header, fica sempre relativo à viewport. -->
+<div class="nav__mobile" id="navMobile">
+  <a href="#sobre">Sobre</a>
+  <a href="#ambientes">Ambientes</a>
+  <a href="#video">Vídeo</a>
+  <a href="#depoimentos">Avaliações</a>
+  <a href="#contato">Contato</a>
+  <a href="https://wa.me/5531994334029" target="_blank" rel="noopener" class="btn btn--gold">Falar no WhatsApp</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__media">
+    <img src="images/full/sala-painel-marmore.jpg" alt="Painel de marcenaria com mármore, ripado em madeira e iluminação embutida, projeto Maxin" class="hero__img">
+    <div class="hero__scrim"></div>
+  </div>
+
+  <div class="hero__content">
+    <p class="eyebrow eyebrow--light reveal">Marcenaria planejada · Belo Horizonte</p>
+    <h1 class="hero__title reveal">
+      Cada ambiente<br> tem a sua <em>marcenaria.</em>
+    </h1>
+    <p class="hero__lede reveal">
+      Projetamos e fabricamos móveis sob medida para cozinhas, salas, quartos e áreas de convívio —
+      cuidando de cada veio de madeira, cada luz e cada milímetro como se fosse para a nossa própria casa.
+    </p>
+    <div class="hero__actions reveal">
+      <a href="#ambientes" class="btn btn--gold">Ver ambientes</a>
+      <a href="https://wa.me/5531994334029" target="_blank" rel="noopener" class="btn btn--ghost-light">Solicitar orçamento</a>
+    </div>
+  </div>
+
+  <a href="#trust" class="hero__scroll" aria-label="Rolar para baixo">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust" id="trust">
+  <div class="trust__inner">
+    <div class="trust__item">
+      <span class="trust__num">4,9</span>
+      <span class="trust__label">nota no Google<br><small>50 avaliações</small></span>
+    </div>
+    <div class="trust__div" aria-hidden="true"></div>
+    <div class="trust__item">
+      <span class="trust__num">100%</span>
+      <span class="trust__label">projeto sob<br><small>medida</small></span>
+    </div>
+    <div class="trust__div" aria-hidden="true"></div>
+    <div class="trust__item">
+      <span class="trust__num">BH</span>
+      <span class="trust__label">Santa Cruz,<br><small>Belo Horizonte</small></span>
+    </div>
+    <div class="trust__div" aria-hidden="true"></div>
+    <div class="trust__item">
+      <span class="trust__num">3</span>
+      <span class="trust__label">etapas: projeto,<br><small>fábrica e montagem</small></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="about" id="sobre">
+  <div class="about__inner">
+    <div class="about__text reveal">
+      <p class="eyebrow">Quem faz</p>
+      <h2 class="h2">Uma marcenaria tocada<br> a quatro mãos.</h2>
+      <p class="about__p">
+        A Maxin nasceu da vontade de fazer marcenaria de um jeito diferente: presente em cada etapa,
+        do primeiro traço no projeto até o último ajuste na montagem. Somos uma dupla à frente do
+        ateliê — e isso significa que quem desenha o ambiente é quem acompanha a obra de perto,
+        do mármore ao ripado, da luz embutida ao puxador.
+      </p>
+      <p class="about__p">
+        Trabalhamos com madeira, mármore, laca e iluminação técnica para transformar cozinhas, salas,
+        quartos, closets, lavanderias e áreas gourmet em ambientes com identidade — sem perder de vista
+        o que faz um projeto planejado valer a pena: prazo, acabamento e uso no dia a dia.
+      </p>
+      <div class="about__stats">
+        <div><strong>4,9★</strong><span>avaliação média</span></div>
+        <div><strong>50+</strong><span>projetos avaliados</span></div>
+        <div><strong>7</strong><span>tipos de ambiente</span></div>
+      </div>
+    </div>
+
+    <div class="about__photo reveal">
+      <div class="about__frame">
+        <img src="images/full/equipe-casal.jpg" alt="Os fundadores da Maxin Móveis Planejados, casal responsável pelo ateliê em Belo Horizonte">
+      </div>
+      <p class="about__caption">À frente da Maxin — presentes do orçamento à última montagem.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider-ripado" aria-hidden="true">
+  <div class="divider-ripado__slats"></div>
+</div>
+
+<!-- ============ AMBIENTES ============ -->
+<section class="ambientes" id="ambientes">
+  <div class="ambientes__head">
+    <p class="eyebrow">Portfólio</p>
+    <h2 class="h2">Ambientes, um a um.</h2>
+    <p class="ambientes__lede">Cada projeto é desenhado para o espaço e a rotina de quem vive nele. Navegue pelos ambientes que já assinamos.</p>
+
+    <nav class="chips" aria-label="Atalhos de ambientes">
+      <a href="#salas" class="chip">Salas de estar</a>
+      <a href="#cozinhas" class="chip">Cozinhas</a>
+      <a href="#quartos" class="chip">Quartos &amp; Closets</a>
+      <a href="#lavanderias" class="chip">Lavanderias</a>
+      <a href="#gourmet" class="chip">Área Gourmet</a>
+      <a href="#banheiros" class="chip">Banheiros</a>
+    </nav>
+  </div>
+
+  <!-- SALAS -->
+  <div class="room" id="salas">
+    <div class="room__label reveal">
+      <span class="room__index">01</span>
+      <div>
+        <h3 class="h3">Salas de estar</h3>
+        <p>Painéis de TV, cristaleiras e composições em madeira, mármore e latão que assinam o ambiente.</p>
+      </div>
+    </div>
+    <div class="bento reveal" data-lightbox-group="salas">
+      <button class="bento__item bento__item--wide" data-full="images/full/sala-painel-marmore.jpg" data-caption="Painel de TV em ripado de madeira com mármore e iluminação embutida">
+        <img src="images/thumb/sala-painel-marmore.jpg" alt="Painel de TV com ripado de madeira, mármore e iluminação embutida" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/sala-cristaleira-detalhe.jpg" data-caption="Cristaleira em vidro com iluminação interna">
+        <img src="images/thumb/sala-cristaleira-detalhe.jpg" alt="Cristaleira planejada em vidro com iluminação interna" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/sala-cristaleira-vazia.jpg" data-caption="Cristaleira suspensa com nicho em madeira">
+        <img src="images/thumb/sala-cristaleira-vazia.jpg" alt="Cristaleira suspensa com nicho aberto em madeira" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/sala-ambiente-completo.jpg" data-caption="Sala integrada com iluminação cênica">
+        <img src="images/thumb/sala-ambiente-completo.jpg" alt="Sala de estar integrada com marcenaria e iluminação cênica" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/sala-espelho-ripado-1.jpg" data-caption="Composição em espelho e ripado de madeira">
+        <img src="images/thumb/sala-espelho-ripado-1.jpg" alt="Composição em espelho e ripado de madeira na sala" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/sala-espelho-ripado-2.jpg" data-caption="Detalhe do acabamento em madeira ripada">
+        <img src="images/thumb/sala-espelho-ripado-2.jpg" alt="Detalhe de acabamento em madeira ripada e espelho" loading="lazy">
+      </button>
+      <button class="bento__item bento__item--wide" data-full="images/full/sala-pendente-decorativo.jpg" data-caption="Iluminação decorativa integrada ao projeto">
+        <img src="images/thumb/sala-pendente-decorativo.jpg" alt="Pendente decorativo integrado ao projeto de marcenaria" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <!-- COZINHAS -->
+  <div class="room room--dark" id="cozinhas">
+    <div class="room__label reveal">
+      <span class="room__index">02</span>
+      <div>
+        <h3 class="h3">Cozinhas</h3>
+        <p>Cozinhas planejadas com fluxo, iluminação e acabamento pensados para o dia a dia da casa.</p>
+      </div>
+    </div>
+    <div class="bento reveal" data-lightbox-group="cozinhas">
+      <button class="bento__item bento__item--wide" data-full="images/full/cozinha-azul-ilha.jpg" data-caption="Cozinha com ilha central e marcenaria azul-serena">
+        <img src="images/thumb/cozinha-azul-ilha.jpg" alt="Cozinha planejada com ilha central e armários em azul-serena" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-azul-vista-cidade.jpg" data-caption="Cozinha corredor com vista para a cidade">
+        <img src="images/thumb/cozinha-azul-vista-cidade.jpg" alt="Cozinha planejada em corredor com vista para a cidade" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-azul-detalhe-plantas.jpg" data-caption="Nicho com prateleira e plantas">
+        <img src="images/thumb/cozinha-azul-detalhe-plantas.jpg" alt="Detalhe de nicho com prateleira e plantas na cozinha" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-fogao-cooktop-1.jpg" data-caption="Bancada com cooktop e nicho iluminado">
+        <img src="images/thumb/cozinha-fogao-cooktop-1.jpg" alt="Bancada de cozinha com cooktop e nicho iluminado" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-armarios-vidro.jpg" data-caption="Armários superiores em vidro iluminado">
+        <img src="images/thumb/cozinha-armarios-vidro.jpg" alt="Armários superiores em vidro com iluminação interna" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-geladeira-tacas.jpg" data-caption="Nicho para taças integrado aos armários">
+        <img src="images/thumb/cozinha-geladeira-tacas.jpg" alt="Nicho para taças integrado à marcenaria da cozinha" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-corredor-1.jpg" data-caption="Cozinha corredor com iluminação de rodapé">
+        <img src="images/thumb/cozinha-corredor-1.jpg" alt="Cozinha planejada em corredor com iluminação de rodapé" loading="lazy">
+      </button>
+      <button class="bento__item bento__item--wide" data-full="images/full/cozinha-pendentes-balcao.jpg" data-caption="Ilha gourmet com pendentes e banquetas">
+        <img src="images/thumb/cozinha-pendentes-balcao.jpg" alt="Ilha gourmet com pendentes decorativos e banquetas" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-casa1-geladeira.jpg" data-caption="Cozinha em L com paginação de porcelanato">
+        <img src="images/thumb/cozinha-casa1-geladeira.jpg" alt="Cozinha planejada em L com paginação em porcelanato" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-casa2-geladeira-prateleira.jpg" data-caption="Prateleiras com estrutura em latão">
+        <img src="images/thumb/cozinha-casa2-geladeira-prateleira.jpg" alt="Prateleiras decorativas com estrutura em latão na cozinha" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-casa2-ampla.jpg" data-caption="Cozinha ampla com marcenaria em tom claro">
+        <img src="images/thumb/cozinha-casa2-ampla.jpg" alt="Cozinha ampla com marcenaria planejada em tom claro" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/cozinha-casa3-ampla-mesa.jpg" data-caption="Cozinha integrada à sala de jantar">
+        <img src="images/thumb/cozinha-casa3-ampla-mesa.jpg" alt="Cozinha planejada integrada à sala de jantar com pé-direito duplo" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <!-- QUARTOS & CLOSETS -->
+  <div class="room" id="quartos">
+    <div class="room__label reveal">
+      <span class="room__index">03</span>
+      <div>
+        <h3 class="h3">Quartos &amp; closets</h3>
+        <p>Penteadeiras sob medida e closets organizados até o último cabide.</p>
+      </div>
+    </div>
+    <div class="bento reveal" data-lightbox-group="quartos">
+      <button class="bento__item bento__item--wide" data-full="images/full/quarto-penteadeira-tv.jpg" data-caption="Penteadeira com espelho, TV e iluminação de cena">
+        <img src="images/thumb/quarto-penteadeira-tv.jpg" alt="Penteadeira planejada com espelho, painel de TV e iluminação de cena" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/closet-completo.jpg" data-caption="Closet corredor com prateleiras e cabideiros">
+        <img src="images/thumb/closet-completo.jpg" alt="Closet planejado em corredor com prateleiras e cabideiros" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/closet-gaveteiro-espelho.jpg" data-caption="Gaveteiro com espelho e organizadores internos">
+        <img src="images/thumb/closet-gaveteiro-espelho.jpg" alt="Gaveteiro de closet com espelho e organizadores internos" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <!-- LAVANDERIAS -->
+  <div class="room room--dark" id="lavanderias">
+    <div class="room__label reveal">
+      <span class="room__index">04</span>
+      <div>
+        <h3 class="h3">Lavanderias</h3>
+        <p>Marcenaria resistente à rotina da casa, sem abrir mão do acabamento.</p>
+      </div>
+    </div>
+    <div class="bento bento--pair reveal" data-lightbox-group="lavanderias">
+      <button class="bento__item" data-full="images/full/lavanderia-bancada-pia.jpg" data-caption="Bancada com cuba e revestimento marmorizado">
+        <img src="images/thumb/lavanderia-bancada-pia.jpg" alt="Lavanderia com bancada, cuba e revestimento marmorizado" loading="lazy">
+      </button>
+      <button class="bento__item" data-full="images/full/lavanderia-maquina-lavar.jpg" data-caption="Armário técnico com máquina de lavar embutida">
+        <img src="images/thumb/lavanderia-maquina-lavar.jpg" alt="Armário planejado com máquina de lavar embutida" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <!-- GOURMET -->
+  <div class="room" id="gourmet">
+    <div class="room__label reveal">
+      <span class="room__index">05</span>
+      <div>
+        <h3 class="h3">Área gourmet</h3>
+        <p>Churrasqueiras e bancadas externas integradas ao projeto da casa.</p>
+      </div>
+    </div>
+    <div class="bento bento--single reveal" data-lightbox-group="gourmet">
+      <button class="bento__item bento__item--wide" data-full="images/full/gourmet-churrasqueira.jpg" data-caption="Área gourmet com churrasqueira e bancada em quartzo">
+        <img src="images/thumb/gourmet-churrasqueira.jpg" alt="Área gourmet planejada com churrasqueira e bancada em quartzo" loading="lazy">
+      </button>
+    </div>
+  </div>
+
+  <!-- BANHEIROS -->
+  <div class="room room--dark" id="banheiros">
+    <div class="room__label reveal">
+      <span class="room__index">06</span>
+      <div>
+        <h3 class="h3">Banheiros</h3>
+        <p>Gabinetes em madeira maciça com iluminação de destaque para a cuba.</p>
+      </div>
+    </div>
+    <div class="bento bento--single reveal" data-lightbox-group="banheiros">
+      <button class="bento__item bento__item--wide" data-full="images/full/banheiro-cuba-espelho.jpg" data-caption="Gabinete em madeira com cuba de apoio e espelho iluminado">
+        <img src="images/thumb/banheiro-cuba-espelho.jpg" alt="Gabinete de banheiro em madeira com cuba de apoio e espelho iluminado" loading="lazy">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="video" id="video">
+  <div class="video__inner">
+    <div class="video__text reveal">
+      <p class="eyebrow">Tour em vídeo</p>
+      <h2 class="h2">Veja um projeto<br> Maxin de perto.</h2>
+      <p>Um passeio rápido por um dos nossos ambientes entregues — luz, acabamento e detalhe, do jeito que ficam na vida real.</p>
+    </div>
+    <div class="video__frame reveal">
+      <video
+        id="tourVideo"
+        poster="images/full/tour-poster.jpg"
+        playsinline
+        preload="metadata"
+        controls>
+        <source src="images/tour-video-web.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo em HTML5.
+      </video>
+      <button class="video__play" id="videoPlay" aria-label="Reproduzir vídeo">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="divider-ripado divider-ripado--light" aria-hidden="true">
+  <div class="divider-ripado__slats"></div>
+</div>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="reviews" id="depoimentos">
+  <div class="reviews__head reveal">
+    <p class="eyebrow">Quem já fez com a gente</p>
+    <h2 class="h2">Avaliações no Google.</h2>
+    <div class="reviews__score">
+      <span class="reviews__number">4,9</span>
+      <div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <span>a partir de 50 avaliações</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews__grid">
+    <article class="review reveal">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>“A experiência com a marcenaria foi excelente do início ao fim. A entrega aconteceu antes do
+      prazo combinado em contrato — isso já mostrou o comprometimento da equipe. A qualidade dos
+      móveis e dos acabamentos ficou acima do esperado.”</p>
+      <footer><strong>Ayalla Nicolau</strong><span>Cliente Google</span></footer>
+    </article>
+
+    <article class="review reveal">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>“Fiquei completamente satisfeito com a entrega, a pontualidade e os materiais de primeira
+      linha. Um agradecimento especial à equipe de atendimento e ao montador, que foi muito
+      competente.”</p>
+      <footer><strong>Rogerio Paulino</strong><span>Cliente Google</span></footer>
+    </article>
+
+    <article class="review reveal">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>“Profissionais capacitados, atenciosos e extremamente cuidadosos. Os armários planejados têm
+      excelente qualidade e superaram nossas expectativas — a entrega foi feita antes do prazo e a
+      instalação, sem contratempos.”</p>
+      <footer><strong>Angelica Cristina</strong><span>Cliente Google</span></footer>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta">
+  <div class="cta__inner reveal">
+    <h2 class="h2 h2--light">Vamos planejar<br> o seu ambiente?</h2>
+    <p>Conta pra gente o espaço que você quer transformar — a gente cuida do projeto, da fabricação e da montagem.</p>
+    <div class="cta__actions">
+      <a href="https://wa.me/5531994334029" target="_blank" rel="noopener" class="btn btn--gold btn--lg">Chamar no WhatsApp</a>
+      <a href="tel:+5531994334029" class="btn btn--ghost-light btn--lg">(31) 99433-4029</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / CONTATO ============ -->
+<footer class="footer" id="contato">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="nav__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav__word">MAXIN<span class="nav__sub">móveis planejados</span></span>
+      <p>Marcenaria planejada em Belo Horizonte — projeto, fabricação e montagem, do início ao fim.</p>
+      <a class="footer__ig" href="https://instagram.com/maxinmoveis" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47C15.05 21.99 14.7 22 12 22s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76a4.9 4.9 0 0 1 1.76-1.15c.64-.25 1.37-.42 2.43-.47C8.95 2.01 9.3 2 12 2m0 1.8c-2.66 0-2.97.01-4.02.06-.87.04-1.34.18-1.65.3-.42.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.65C4.31 9.03 4.3 9.34 4.3 12s.01 2.97.06 4.02c.04.87.18 1.34.3 1.65.16.42.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.65.3 1.05.05 1.36.06 4.02.06s2.97-.01 4.02-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.65.05-1.05.06-1.36.06-4.02s-.01-2.97-.06-4.02c-.04-.87-.18-1.34-.3-1.65a2.75 2.75 0 0 0-.66-1.02 2.75 2.75 0 0 0-1.02-.66c-.31-.12-.78-.26-1.65-.3C14.97 3.81 14.66 3.8 12 3.8m0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3m0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7m5.35-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+        @maxinmoveis
+      </a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ambientes</h4>
+      <a href="#salas">Salas de estar</a>
+      <a href="#cozinhas">Cozinhas</a>
+      <a href="#quartos">Quartos &amp; closets</a>
+      <a href="#lavanderias">Lavanderias</a>
+      <a href="#gourmet">Área gourmet</a>
+      <a href="#banheiros">Banheiros</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <a href="https://wa.me/5531994334029" target="_blank" rel="noopener">(31) 99433-4029</a>
+      <a href="mailto:contato@maxinmoveis.com.br">contato@maxinmoveis.com.br</a>
+      <p class="footer__addr">Av. Arthur Guimarães, 102<br>Santa Cruz — Belo Horizonte, MG<br>31150-690</p>
+    </div>
+
+    <div class="footer__map">
+      <iframe
+        src="https://maps.google.com/maps?q=Av.%20Arthur%20Guimar%C3%A3es%2C%20102%2C%20Santa%20Cruz%2C%20Belo%20Horizonte%20-%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização da Maxin Móveis Planejados"></iframe>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© <span id="year"></span> Maxin Móveis Planejados. Todos os direitos reservados.</p>
+    <a href="#inicio" class="footer__top">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Próxima">›</button>
+  <figure class="lightbox__figure">
+    <img id="lightboxImg" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
