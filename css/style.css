@@ -220,10 +220,10 @@ ul{ list-style:none; }
 }
 .hero__title{
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(2.4rem, 6.4vw, 5.2rem);
-  line-height: 1.04; letter-spacing: -0.015em;
+  font-size: clamp(1.4rem, 6.5vw, 5.2rem);
+  line-height: 1.08; letter-spacing: -0.015em;
   color: var(--cream);
-  max-width: 24ch;
+  max-width: 33ch;
   margin-bottom: 1.4rem;
 }
 .hero__title em{ font-style: italic; color: var(--brass-light); font-weight: 400; }
@@ -264,7 +264,7 @@ ul{ list-style:none; }
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2.2rem;
 }
 .trust__item{ display: flex; align-items: center; gap: .9rem; }
-.trust__num{ font-family: var(--serif); font-size: clamp(1.05rem, 2vw, 1.5rem); color: var(--brass-light); font-weight: 500; }
+.trust__num{ font-family: var(--serif); font-size: 2rem; color: var(--brass-light); font-weight: 500; }
 .trust__label{ font-size: .78rem; color: rgba(246,241,233,.75); line-height: 1.35; }
 .trust__label small{ color: rgba(246,241,233,.5); }
 .trust__div{ width: 1px; height: 34px; background: var(--line-light); }
@@ -471,7 +471,9 @@ ul{ list-style:none; }
   border-radius: 999px;
   padding: .9rem 1.8rem .9rem 1rem;
   box-shadow: 0 24px 48px -26px rgba(36,26,18,.4);
+  transition: transform .3s var(--ease), box-shadow .3s;
 }
+.reviews__badge:hover{ transform: translateY(-3px); box-shadow: 0 30px 56px -26px rgba(36,26,18,.5); }
 .reviews__badge-google{ width: 36px; height: 36px; flex: none; }
 .reviews__badge-main{ display: flex; align-items: baseline; gap: .6rem; }
 .reviews__number{ font-family: var(--serif); font-size: 2.8rem; line-height: 1; color: var(--wood-deep); font-weight: 600; }
@@ -556,6 +558,14 @@ ul{ list-style:none; }
 }
 .reviews-modal__item .review p{ -webkit-line-clamp: unset; overflow: visible; }
 .reviews-modal__item.is-highlighted .review{ outline-color: var(--brass); background: rgba(226,197,137,.22); }
+.reviews-modal__cta{
+  display: block; text-align: center; margin-top: .4rem;
+  padding: 1.1rem; border-radius: var(--radius);
+  background: var(--brass); color: var(--ink);
+  font-weight: 700; font-size: .88rem;
+  transition: background .25s;
+}
+.reviews-modal__cta:hover{ background: var(--brass-light); }
 
 @media (max-width: 640px){
   .reviews-modal__panel{ max-height: 88vh; }

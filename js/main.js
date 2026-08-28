@@ -209,13 +209,10 @@
   var reviewsModal = document.getElementById("reviewsModal");
   var reviewsModalList = document.getElementById("reviewsModalList");
   var reviewsModalClose = document.getElementById("reviewsModalClose");
-  var reviewsAllBtn = document.getElementById("reviewsAllBtn");
   var reviewButtons = Array.prototype.slice.call(document.querySelectorAll(".review"));
+  var GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/3m2fjK2cuuuWEu9y7";
 
   if (reviewsModal && reviewsModalList && reviewButtons.length) {
-    if (reviewsAllBtn) {
-      reviewsAllBtn.textContent = "Ver todas as " + reviewButtons.length + " avaliações →";
-    }
     reviewButtons.forEach(function (btn, i) {
       var clone = btn.cloneNode(true);
       clone.removeAttribute("type");
@@ -227,6 +224,14 @@
 
       btn.addEventListener("click", function () { openReviewsModal(i); });
     });
+
+    var seeAllLink = document.createElement("a");
+    seeAllLink.href = GOOGLE_REVIEWS_URL;
+    seeAllLink.target = "_blank";
+    seeAllLink.rel = "noopener";
+    seeAllLink.className = "reviews-modal__cta";
+    seeAllLink.textContent = "Ver tudo no Google ↗";
+    reviewsModalList.appendChild(seeAllLink);
 
     var onReviewsKeydown = function (e) { if (e.key === "Escape") closeReviewsModal(); };
 
@@ -254,7 +259,6 @@
       document.removeEventListener("keydown", onReviewsKeydown);
     }
 
-    if (reviewsAllBtn) reviewsAllBtn.addEventListener("click", function () { openReviewsModal(); });
     if (reviewsModalClose) reviewsModalClose.addEventListener("click", closeReviewsModal);
     reviewsModal.addEventListener("click", function (e) {
       if (e.target === reviewsModal) closeReviewsModal();
