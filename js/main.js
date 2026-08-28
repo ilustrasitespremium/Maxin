@@ -231,7 +231,7 @@
   var reviewsModalList = document.getElementById("reviewsModalList");
   var reviewsModalClose = document.getElementById("reviewsModalClose");
   var reviewButtons = Array.prototype.slice.call(document.querySelectorAll(".review"));
-  var GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Maxin+%7C+M%C3%B3veis+Planejados+BH/@-19.8785156,-43.9354263,20z/data=!4m8!3m7!1s0x493dd965b6391fa5:0x40df2199ec184b53!8m2!3d-19.8785156!4d-43.9354263!9m1!1b1!16s%2Fg%2F11kjpfq629?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D";
+  var GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Maxin+%7C+M%C3%B3veis+Planejados+BH/@-19.8785156,-43.9354263,20z/data=!4m6!3m5!1s0x493dd965b6391fa5:0x40df2199ec184b53!8m2!3d-19.8785156!4d-43.9354263!16s%2Fg%2F11kjpfq629?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D";
   var closeReviewsModal = function () {};
 
   if (reviewsModal && reviewsModalList && reviewButtons.length) {
