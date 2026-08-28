@@ -223,15 +223,15 @@ ul{ list-style:none; }
 }
 .hero__title{
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(1.3rem, 5.5vw, 5.2rem);
-  line-height: 1.12; letter-spacing: -0.01em;
+  font-size: clamp(2.2rem, 9.5vw, 5.2rem);
+  line-height: 1.1; letter-spacing: -0.01em;
   color: var(--cream);
   max-width: 33ch;
   margin-bottom: 1.4rem;
 }
 .hero__title em{ font-style: italic; color: var(--brass-light); font-weight: 400; }
 .hero__lede{
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: clamp(.9rem, 1.6vw, 1.15rem);
   color: rgba(246,241,233,.86);
   max-width: 46ch;
   line-height: 1.6;
@@ -269,7 +269,7 @@ ul{ list-style:none; }
 .trust__item{ display: flex; align-items: center; gap: .9rem; }
 .trust__num{ font-family: var(--serif); font-size: 2rem; color: var(--brass-light); font-weight: 500; }
 .trust__label{ font-size: .78rem; color: rgba(246,241,233,.75); line-height: 1.35; }
-.trust__label small{ color: rgba(246,241,233,.5); }
+.trust__label small{ color: inherit; }
 .trust__div{ width: 1px; height: 34px; background: var(--line-light); }
 @media (max-width: 700px){ .trust__div{ display:none; } .trust__inner{ gap: 1.6rem 2.4rem; justify-content: flex-start;} }
 
@@ -432,7 +432,7 @@ ul{ list-style:none; }
 .video{ background: var(--cream); padding: 7rem 1.5rem; }
 .video__inner{
   max-width: var(--container); margin: 0 auto;
-  display: grid; grid-template-columns: 1fr minmax(300px, 440px); gap: 3.5rem; align-items: center;
+  display: grid; grid-template-columns: .85fr 1.15fr; gap: 3.5rem; align-items: center;
   justify-content: center;
 }
 .video__text p{ color: var(--muted); line-height: 1.7; max-width: 40ch; }
@@ -440,7 +440,7 @@ ul{ list-style:none; }
   position: relative; border-radius: var(--radius); overflow: hidden;
   box-shadow: 0 40px 70px -25px rgba(36,26,18,.4);
   background: var(--ink);
-  width: min(440px, 100%);
+  width: min(640px, 100%);
   margin-inline: auto;
 }
 .video__frame video{ width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; background: var(--ink); }

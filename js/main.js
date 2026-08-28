@@ -135,6 +135,7 @@
     document.body.style.overflow = "hidden";
     lbClose.focus();
     document.addEventListener("keydown", onKeydown);
+    pushModalHistory("foto");
   }
 
   function renderLightbox() {
@@ -146,13 +147,14 @@
     lbCaption.textContent = caption;
   }
 
-  function closeLightbox() {
+  function closeLightbox(fromPopstate) {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
     lbImg.src = "";
     document.removeEventListener("keydown", onKeydown);
     if (lastFocused) lastFocused.focus();
+    if (!fromPopstate) consumeModalHistory();
   }
 
   function showNext() {
@@ -170,11 +172,30 @@
     if (e.key === "ArrowLeft") showPrev();
   }
 
-  lbClose.addEventListener("click", closeLightbox);
+  lbClose.addEventListener("click", function () { closeLightbox(); });
   lbNext.addEventListener("click", showNext);
   lbPrev.addEventListener("click", showPrev);
   lightbox.addEventListener("click", function (e) {
     if (e.target === lightbox) closeLightbox();
+  });
+
+  /* ---------- fecha modais (fotos/avaliações) com o botão/gesto "voltar" do
+     navegador, em vez de deixar o usuário preso ou navegar pra fora da página ---------- */
+  var openModalName = null;
+  function pushModalHistory(name) {
+    openModalName = name;
+    history.pushState({ modal: name }, "", "#" + name);
+  }
+  function consumeModalHistory() {
+    if (openModalName) {
+      openModalName = null;
+      history.back();
+    }
+  }
+  window.addEventListener("popstate", function () {
+    openModalName = null;
+    if (lightbox.classList.contains("is-open")) closeLightbox(true);
+    if (reviewsModal && reviewsModal.classList.contains("is-open")) closeReviewsModal(true);
   });
 
   /* ---------- carrossel (fotos dos ambientes + avaliações) ---------- */
@@ -210,7 +231,8 @@
   var reviewsModalList = document.getElementById("reviewsModalList");
   var reviewsModalClose = document.getElementById("reviewsModalClose");
   var reviewButtons = Array.prototype.slice.call(document.querySelectorAll(".review"));
-  var GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/3m2fjK2cuuuWEu9y7";
+  var GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Maxin+%7C+M%C3%B3veis+Planejados+BH/@-19.8785156,-43.9354263,20z/data=!4m8!3m7!1s0x493dd965b6391fa5:0x40df2199ec184b53!8m2!3d-19.8785156!4d-43.9354263!9m1!1b1!16s%2Fg%2F11kjpfq629?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D";
+  var closeReviewsModal = function () {};
 
   if (reviewsModal && reviewsModalList && reviewButtons.length) {
     reviewButtons.forEach(function (btn, i) {
@@ -240,6 +262,7 @@
       reviewsModal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
       document.addEventListener("keydown", onReviewsKeydown);
+      pushModalHistory("avaliacoes");
       if (typeof focusIndex === "number") {
         var target = document.getElementById("review-" + focusIndex);
         if (target) {
@@ -252,14 +275,15 @@
       }
     }
 
-    function closeReviewsModal() {
+    closeReviewsModal = function (fromPopstate) {
       reviewsModal.classList.remove("is-open");
       reviewsModal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
       document.removeEventListener("keydown", onReviewsKeydown);
-    }
+      if (!fromPopstate) consumeModalHistory();
+    };
 
-    if (reviewsModalClose) reviewsModalClose.addEventListener("click", closeReviewsModal);
+    if (reviewsModalClose) reviewsModalClose.addEventListener("click", function () { closeReviewsModal(); });
     reviewsModal.addEventListener("click", function (e) {
       if (e.target === reviewsModal) closeReviewsModal();
     });
