@@ -223,7 +223,7 @@ ul{ list-style:none; }
   font-size: clamp(2.4rem, 6.4vw, 5.2rem);
   line-height: 1.04; letter-spacing: -0.015em;
   color: var(--cream);
-  max-width: 15ch;
+  max-width: 24ch;
   margin-bottom: 1.4rem;
 }
 .hero__title em{ font-style: italic; color: var(--brass-light); font-weight: 400; }
